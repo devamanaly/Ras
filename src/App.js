@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Headers from './Components/Header/Head';
+import Dropdown from './Components/DropDown/DropDown';
+import NavMeanu from './Components/DropDown/NavMeanu';
+import VedioP from './Components/VedioPlayer/VedioP';
+import Vedio2 from './Components/VedioPlayer/Vedio2';
+import Check from './Components/Check';
+import Slider from './new/components/Slider';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+{/* <Headers/> */}
+<Check/>
+{/* <Slider/> */}
+{/* <Vedio2/> */}
     </div>
   );
 }

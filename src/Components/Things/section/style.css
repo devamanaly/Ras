@@ -1,0 +1,35 @@
+.buton  button {
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background: linear-gradient(to left, #FF4B2B, #C83456 60%);
+  }
+  
+  .buton button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F1802A;
+    transform-origin: center top;
+    transform: scaleY(0);
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  .buton button:hover {
+    cursor: pointer;
+  }
+  
+  .buton button:hover::before {
+    transform-origin: center bottom;
+    transform: scaleY(1);
+  }
+  

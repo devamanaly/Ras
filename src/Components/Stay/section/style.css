@@ -1,0 +1,7 @@
+.gradient-text {
+    background: transparent linear-gradient(95deg, #A20054 0%, #F1802A 100%) 0 0 no-repeat padding-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Diodrum Light', Arial, sans-serif;
+
+  }
