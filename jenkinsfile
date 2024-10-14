@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                // Corrected Docker build command
+                sh 'docker build -t todo-node-app .'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+                // Add your testing commands here
+                // e.g., sh 'docker run --rm todo-node-app npm test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                // Stop and remove existing container if it exists
+                sh '''
+                    docker stop node-todo-app || true
+                    docker rm node-todo-app || true
+                '''
+                
+                // Run the Docker container and expose it on port 3000
+                sh 'docker run -d --name node-todo-app -p 3000:8081 todo-node-app'
+            }
+        }
+    }
+}
